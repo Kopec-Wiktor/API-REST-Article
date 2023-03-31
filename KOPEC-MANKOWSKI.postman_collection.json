@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "afb751ad-1fd2-491a-b1a0-c48606f9e0e4",
+		"name": "KOPEC-MANKOWSKI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25867238"
+	},
+	"item": [
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Moderator",
+					"item": [
+						{
+							"name": "Supprimer un article",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDQ1Nn0.5TtdVUtlk4965AW88hSSC3HtBzOQQtgIIQzSYZU76Mk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Publisher",
+					"item": [
+						{
+							"name": "Sup un article pas à amk",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDI2OX0.z92k7DgQJSRExOZzqgfkCcKgb4l_7RPoQXE4dFKs23Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sup article où auteur amk",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDI2OX0.z92k7DgQJSRExOZzqgfkCcKgb4l_7RPoQXE4dFKs23Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "ModifArticle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDA0Nzc4NX0.sAKRphGle01VHrQDRKKB8SdAlnxlxFndc2KtNsZ_daU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"date_publication\":\"2023-03-16 00:28:31\", \"contenu\":\"12345678\"}"
+						},
+						"url": {
+							"raw": "http://localhost/REST2/ServeurArticleREST.php?id=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"REST2",
+								"ServeurArticleREST.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "GenToken publisher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\":\"amk\", \"password\":\"1234\"}"
+								},
+								"url": {
+									"raw": "http://localhost/REST2/AuthREST.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"AuthREST.php"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GenToken moderateur",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\":\"wikpak\", \"password\":\"1234\"}"
+								},
+								"url": {
+									"raw": "http://localhost/REST2/AuthREST.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"AuthREST.php"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GenToken faux mdp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\":\"Adopo@gmail.com\", \"password\":\"123\"}"
+								},
+								"url": {
+									"raw": "http://localhost/REST2/AuthREST.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"AuthREST.php"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Liker",
+					"item": [
+						{
+							"name": "Ajout Like",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDI2OX0.z92k7DgQJSRExOZzqgfkCcKgb4l_7RPoQXE4dFKs23Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=Like/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "Like/7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ajout Dislike",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE4NjQ1OX0.FHpNl59HJPeR580V3WBr2J80dxMql7ipvu1gTe7iGgs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=Dislike/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "Dislike/5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AjoutArticle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDA3NjU4MX0.PlBBIk_1aAeHWU1zL1jRvqVIjHgldkkNmLACUrB67YY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"date_publication\":\"2023-03-16 00:28:31\", \"contenu\":\"12345688888888\"}"
+						},
+						"url": {
+							"raw": "http://localhost/REST2/ServeurArticleREST.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"REST2",
+								"ServeurArticleREST.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Non authentifié",
+					"item": [
+						{
+							"name": "Read Non Authentifié",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "18"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Moderator",
+					"item": []
+				},
+				{
+					"name": "Publisher",
+					"item": [
+						{
+							"name": "Article du publisher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDI2OX0.z92k7DgQJSRExOZzqgfkCcKgb4l_7RPoQXE4dFKs23Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=MyArticle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "MyArticle"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Article avec id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDM1MH0.4n6AZIh6A_1O5SbVwbRnxIA20oFS1ytRph2z4AG27ys",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php?id=6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tout les articles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtayIsImV4cCI6MTY4MDE3NDQ1Nn0.5TtdVUtlk4965AW88hSSC3HtBzOQQtgIIQzSYZU76Mk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/REST2/ServeurArticleREST.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"REST2",
+										"ServeurArticleREST.php"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
